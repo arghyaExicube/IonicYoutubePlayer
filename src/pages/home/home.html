@@ -6,9 +6,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="content">
+  <div id='existing-iframe-example'></div>
+  <!-- <iframe id="existing-iframe-example" width="100%" height="320" [src]="sanitize(vid)" frameborder="0" allowfullscreen></iframe> -->
+    <ion-item>
+      <ion-range (ionChange)="volumeChange()" min="0" max="100" pin="true" [(ngModel)]="contrast" color="secondary">
+        <ion-icon range-left small name="volume-off"></ion-icon>
+        <ion-icon range-right name="volume-up"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <button ion-button (click)="pause()">Pause</button>
+    <button ion-button (click)="play()">Play</button>
+    <button ion-button (click)="mute()">Mute</button>
+    <button ion-button (click)="unmute()">UnMute</button>
 </ion-content>

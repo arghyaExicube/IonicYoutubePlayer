@@ -1,3 +1,29 @@
 page-home {
-
+    .content{
+        -webkit-overflow-scrolling:touch; overflow:auto; 
+    }
+    #existing-iframe-example{
+        html body{
+            #player{
+                .ytp-chrome-top{
+                    width: 50%;
+                    margin: 0px auto;
+                    .ytp-playlist-menu-button{
+                        padding-top: 0px;
+                    }
+                    .ytp-title{
+                        .ytp-title-channel{
+                            .ytp-title-channel-logo{
+                                margin: 0px 5px;
+                            }
+                        }
+                        .ytp-title-text{
+                            padding-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
